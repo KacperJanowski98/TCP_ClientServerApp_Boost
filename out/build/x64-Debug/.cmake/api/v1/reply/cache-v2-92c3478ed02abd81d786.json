@@ -663,7 +663,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
+			"value" : "4"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -1124,6 +1124,42 @@
 			],
 			"type" : "STATIC",
 			"value" : "D:/Projekty/TCP_Client_Server_C++/ClientServerApp"
+		},
+		{
+			"name" : "Networking_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Networking"
+		},
+		{
+			"name" : "Networking_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "Networking_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "D:/Projekty/TCP_Client_Server_C++/ClientServerApp/Networking"
 		},
 		{
 			"name" : "ServerApp_BINARY_DIR",

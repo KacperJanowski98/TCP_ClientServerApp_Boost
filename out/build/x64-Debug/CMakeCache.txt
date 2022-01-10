@@ -211,6 +211,15 @@ ClientServerApp_IS_TOP_LEVEL:STATIC=ON
 ClientServerApp_SOURCE_DIR:STATIC=D:/Projekty/TCP_Client_Server_C++/ClientServerApp
 
 //Value Computed by CMake
+Networking_BINARY_DIR:STATIC=D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Networking
+
+//Value Computed by CMake
+Networking_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Networking_SOURCE_DIR:STATIC=D:/Projekty/TCP_Client_Server_C++/ClientServerApp/Networking
+
+//Value Computed by CMake
 ServerApp_BINARY_DIR:STATIC=D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Server
 
 //Value Computed by CMake
@@ -310,7 +319,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib

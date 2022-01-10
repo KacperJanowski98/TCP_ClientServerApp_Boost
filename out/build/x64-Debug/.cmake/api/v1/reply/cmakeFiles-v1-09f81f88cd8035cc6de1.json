@@ -126,6 +126,9 @@
 			"path" : "D:/Program Files (x86)/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake"
 		},
 		{
+			"path" : "Networking/CMakeLists.txt"
+		},
+		{
 			"path" : "Client/CMakeLists.txt"
 		},
 		{
