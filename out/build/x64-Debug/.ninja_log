@@ -1,0 +1,5 @@
+# ninja log v5
+0	673	6635538077327262	Client/CMakeFiles/ClientApp.dir/main.cpp.obj	2edb38efea595c9f
+674	963	6635538080077413	Client/ClientApp.exe	ddeba16e202d5592
+1	733	6635538210103475	Server/CMakeFiles/ServerApp.dir/main.cpp.obj	a1a991f38971aedc
+734	1043	6635538213036531	Server/ServerApp.exe	b1822ca5f49631ed

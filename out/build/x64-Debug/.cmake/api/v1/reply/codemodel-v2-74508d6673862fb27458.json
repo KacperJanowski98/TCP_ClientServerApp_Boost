@@ -1,0 +1,123 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Client",
+					"jsonFile" : "directory-Client-Debug-32ce8e758cccb39b8cc7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "Client",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "Server",
+					"jsonFile" : "directory-Server-Debug-08cc111fca47106482c9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "Server",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ClientServerApp"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "ClientApp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "ServerApp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "ClientApp::@39d0ae6511a0d9878f7b",
+					"jsonFile" : "target-ClientApp-Debug-41a11eeea8dabe4b986a.json",
+					"name" : "ClientApp",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ServerApp::@20a40c4b36ca103854cb",
+					"jsonFile" : "target-ServerApp-Debug-68e36b3ef053c00b6c73.json",
+					"name" : "ServerApp",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug",
+		"source" : "D:/Projekty/TCP_Client_Server_C++/ClientServerApp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
