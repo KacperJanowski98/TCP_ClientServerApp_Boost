@@ -10,8 +10,10 @@ namespace MOYF
 
 	void TCPConnection::Start()
 	{
+		auto strongThis = shared_from_this();
+
 		boost::asio::async_write(_socket, boost::asio::buffer(_message), 
-			[this](const boost::system::error_code& error, size_t bytesTransferred) {
+			[strongThis](const boost::system::error_code& error, size_t bytesTransferred) {
 				if (error)
 				{
 					std::cout << "Failed to send message!\n";

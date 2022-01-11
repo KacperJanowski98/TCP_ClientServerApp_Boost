@@ -9,7 +9,7 @@ namespace MOYF
 {
 	using boost::asio::ip::tcp;
 
-	class TCPConnection
+	class TCPConnection : public std::enable_shared_from_this<TCPConnection>
 	{
 	public:
 		using pointer = std::shared_ptr<TCPConnection>;
