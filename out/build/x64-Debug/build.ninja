@@ -77,7 +77,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 build cmake_object_order_depends_target_Networking: phony || Networking\CMakeFiles\Networking.dir
 
-build Networking\CMakeFiles\Networking.dir\src\Base.cpp.obj: CXX_COMPILER__Networking_Debug D$:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\src\Base.cpp || cmake_object_order_depends_target_Networking
+build Networking\CMakeFiles\Networking.dir\src\tcp_server.cpp.obj: CXX_COMPILER__Networking_Debug D$:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\src\tcp_server.cpp || cmake_object_order_depends_target_Networking
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++20
   INCLUDES = -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\include -ID:\Lib_Cpp\boost_1_78_0
   OBJECT_DIR = Networking\CMakeFiles\Networking.dir
@@ -93,7 +93,7 @@ build Networking\CMakeFiles\Networking.dir\src\Base.cpp.obj: CXX_COMPILER__Netwo
 #############################################
 # Link the static library Networking\Networking.lib
 
-build Networking\Networking.lib: CXX_STATIC_LIBRARY_LINKER__Networking_Debug Networking\CMakeFiles\Networking.dir\src\Base.cpp.obj
+build Networking\Networking.lib: CXX_STATIC_LIBRARY_LINKER__Networking_Debug Networking\CMakeFiles\Networking.dir\src\tcp_server.cpp.obj
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = Networking\CMakeFiles\Networking.dir
