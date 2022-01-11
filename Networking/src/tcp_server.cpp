@@ -44,4 +44,16 @@ namespace MOYF
 				startAccept();
 			});
 	}
+
+	//template<typename T>
+	//void TCPServer::WriteToConnection(int connectionIndex, T message)
+	//{
+
+	//}
+
+	//template<typename T>
+	//void TCPServer::RegisterListenCallback(ListenCallback<T> callback)
+	//{
+
+	//}
 }

@@ -4,6 +4,7 @@
 #include <boost/asio.hpp>
 #include "Networking/tcp_connection.h"
 #include <vector>
+#include <functional>
 
 namespace MOYF
 {
@@ -19,6 +20,15 @@ namespace MOYF
 		TCPServer(IPV ipv, int port);
 
 		int Run();
+
+		//template<typename T>
+		//void WriteToConnection(int connectionIndex, T message);
+
+		//template<typename T>
+		//using ListenCallback = std::function<void<int, const T&>>;
+
+		//template<typename T>
+		//void RegisterListenCallback(ListenCallback<T> callback);
 	private:
 		void startAccept();
 	private:
