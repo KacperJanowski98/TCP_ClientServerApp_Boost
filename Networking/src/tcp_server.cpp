@@ -1,4 +1,5 @@
 #include "Networking/tcp_server.h"
+#include "Networking/tcp_connection.h"
 #include <iostream>
 
 namespace MOYF
@@ -30,8 +31,17 @@ namespace MOYF
 	void TCPServer::startAccept()
 	{
 		// create a connection
+		auto connection = TCPConnection::Create(_ioContext);
 
 		// asynchronously accept the connection
+		_acceptor.async_accept(connection->Socket(), 
+			[connection, this](const boost::system::error_code& error){
+				if (!error)
+				{
+					connection->Start();
+				}
 
+				startAccept();
+			});
 	}
 }
