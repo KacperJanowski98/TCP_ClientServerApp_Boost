@@ -1,11 +1,13 @@
 # ninja log v5
-4	1337	6635558610217879	Client/CMakeFiles/ClientApp.dir/main.cpp.obj	a86cf9588287a573
-1338	1605	6635558612313700	Client/ClientApp.exe	a56215a2aa80ae11
+1	666	6635559726441221	Client/CMakeFiles/ClientApp.dir/main.cpp.obj	a86cf9588287a573
+667	825	6635559727727392	Client/ClientApp.exe	a56215a2aa80ae11
 1	733	6635538210103475	Server/CMakeFiles/ServerApp.dir/main.cpp.obj	a1a991f38971aedc
 734	1043	6635538213036531	Server/ServerApp.exe	b1822ca5f49631ed
 1	545	6635558602296740	Networking/CMakeFiles/Networking.dir/src/Base.cpp.obj	e967a50d48381304
 547	690	6635558603706684	Networking/Networking.lib	1694dcd5224e2bd9
-2	861	6635559595733770	Client/CMakeFiles/ClientApp.dir/main.cpp.obj	a86cf9588287a573
-862	1047	6635559597213747	Client/ClientApp.exe	a56215a2aa80ae11
-1	666	6635559726441221	Client/CMakeFiles/ClientApp.dir/main.cpp.obj	a86cf9588287a573
-667	825	6635559727727392	Client/ClientApp.exe	a56215a2aa80ae11
+10	1337	6635921800138105	Server/CMakeFiles/ServerApp.dir/main.cpp.obj	bad85199d36886f0
+7	1339	6635921800138105	Client/CMakeFiles/ClientApp.dir/main.cpp.obj	a86cf9588287a573
+3	1643	6635921803197503	Networking/CMakeFiles/Networking.dir/src/Base.cpp.obj	8a1481892db31df
+1647	1728	6635921804008380	Networking/Networking.lib	1694dcd5224e2bd9
+1728	2016	6635921806423160	Client/ClientApp.exe	a56215a2aa80ae11
+1730	2075	6635921807077483	Server/ServerApp.exe	9e6f5b37ceb03264

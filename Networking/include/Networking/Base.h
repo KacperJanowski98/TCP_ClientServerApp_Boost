@@ -5,3 +5,5 @@ enum class MyEnum {
 	Two,
 	Three
 };
+
+void MultiplyByThree();
