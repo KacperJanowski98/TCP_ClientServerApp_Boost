@@ -1,5 +1,4 @@
 #include "Networking/tcp_server.h"
-#include "Networking/tcp_connection.h"
 #include <iostream>
 
 namespace MOYF
@@ -33,6 +32,8 @@ namespace MOYF
 		// create a connection
 		auto connection = TCPConnection::Create(_ioContext);
 
+		_connections.push_back(connection);
+
 		// asynchronously accept the connection
 		_acceptor.async_accept(connection->Socket(), 
 			[connection, this](const boost::system::error_code& error){
@@ -40,7 +41,6 @@ namespace MOYF
 				{
 					connection->Start();
 				}
-
 				startAccept();
 			});
 	}

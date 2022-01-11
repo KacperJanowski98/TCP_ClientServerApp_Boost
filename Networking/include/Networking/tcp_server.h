@@ -2,6 +2,8 @@
 #pragma once
 
 #include <boost/asio.hpp>
+#include "Networking/tcp_connection.h"
+#include <vector>
 
 namespace MOYF
 {
@@ -25,6 +27,8 @@ namespace MOYF
 
 		boost::asio::io_context _ioContext;
 		boost::asio::ip::tcp::acceptor _acceptor;
+
+		std::vector<TCPConnection::pointer> _connections {};
 	};
 
 }
