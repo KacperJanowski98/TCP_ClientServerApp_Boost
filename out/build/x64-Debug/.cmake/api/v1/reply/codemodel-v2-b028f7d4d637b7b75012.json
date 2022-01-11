@@ -124,7 +124,7 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "ClientApp::@39d0ae6511a0d9878f7b",
-					"jsonFile" : "target-ClientApp-Debug-99b0912dfc6c818df830.json",
+					"jsonFile" : "target-ClientApp-Debug-9d5b3443d8e07a4cb925.json",
 					"name" : "ClientApp",
 					"projectIndex" : 2
 				},
@@ -138,7 +138,7 @@
 				{
 					"directoryIndex" : 3,
 					"id" : "ServerApp::@20a40c4b36ca103854cb",
-					"jsonFile" : "target-ServerApp-Debug-f79362d32dbd93eb935d.json",
+					"jsonFile" : "target-ServerApp-Debug-c1795f8c2501b3bed310.json",
 					"name" : "ServerApp",
 					"projectIndex" : 3
 				}

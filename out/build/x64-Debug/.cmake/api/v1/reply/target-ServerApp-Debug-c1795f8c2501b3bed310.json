@@ -67,6 +67,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/Projekty/TCP_Client_Server_C++/ClientServerApp/Networking/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Lib_Cpp/boost_1_78_0"
 				}
 			],
 			"language" : "CXX",

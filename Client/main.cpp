@@ -1,10 +1,7 @@
 ﻿#include <iostream>
-#include <Networking/Base.h>
-
-using namespace std;
 
 int main()
 {
-	cout << "Hello Client! " << static_cast<int>(MyEnum::Two) << endl;
+	cout << "Hello Client! " << endl;
 	return 0;
 }

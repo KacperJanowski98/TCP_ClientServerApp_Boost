@@ -154,7 +154,7 @@ build cmake_object_order_depends_target_ClientApp: phony || cmake_object_order_d
 
 build Client\CMakeFiles\ClientApp.dir\main.cpp.obj: CXX_COMPILER__ClientApp_Debug D$:\Projekty\TCP_Client_Server_C++\ClientServerApp\Client\main.cpp || cmake_object_order_depends_target_ClientApp
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++20
-  INCLUDES = -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Client\Networking -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\include
+  INCLUDES = -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Client\Networking -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\include -ID:\Lib_Cpp\boost_1_78_0
   OBJECT_DIR = Client\CMakeFiles\ClientApp.dir
   OBJECT_FILE_DIR = Client\CMakeFiles\ClientApp.dir
   TARGET_COMPILE_PDB = Client\CMakeFiles\ClientApp.dir\
@@ -207,7 +207,7 @@ build cmake_object_order_depends_target_ServerApp: phony || cmake_object_order_d
 
 build Server\CMakeFiles\ServerApp.dir\main.cpp.obj: CXX_COMPILER__ServerApp_Debug D$:\Projekty\TCP_Client_Server_C++\ClientServerApp\Server\main.cpp || cmake_object_order_depends_target_ServerApp
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++20
-  INCLUDES = -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Server\Networking -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\include
+  INCLUDES = -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Server\Networking -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\include -ID:\Lib_Cpp\boost_1_78_0
   OBJECT_DIR = Server\CMakeFiles\ServerApp.dir
   OBJECT_FILE_DIR = Server\CMakeFiles\ServerApp.dir
   TARGET_COMPILE_PDB = Server\CMakeFiles\ServerApp.dir\
