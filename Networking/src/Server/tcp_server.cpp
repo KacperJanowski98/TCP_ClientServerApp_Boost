@@ -27,16 +27,23 @@ namespace MOYF
 		return 0;
 	}
 
+	void TCPServer::Broadcast(const std::string& message)
+	{
+
+	}
+
 	void TCPServer::startAccept()
 	{
+		_socket.emplace(_ioContext);
 		// create a connection
-		auto connection = TCPConnection::Create(_ioContext);
-
-		_connections.push_back(connection);
+		
 
 		// asynchronously accept the connection
-		_acceptor.async_accept(connection->Socket(), 
-			[connection, this](const boost::system::error_code& error){
+		_acceptor.async_accept(*_socket, [this](const boost::system::error_code& error){
+				auto connection = TCPConnection::Create(_ioContext);
+
+				_connections.insert(connection);
+
 				if (!error)
 				{
 					connection->Start();
@@ -44,16 +51,4 @@ namespace MOYF
 				startAccept();
 			});
 	}
-
-	//template<typename T>
-	//void TCPServer::WriteToConnection(int connectionIndex, T message)
-	//{
-
-	//}
-
-	//template<typename T>
-	//void TCPServer::RegisterListenCallback(ListenCallback<T> callback)
-	//{
-
-	//}
 }
