@@ -15,6 +15,10 @@ int main(int argc, char* argv[])
 	};
 
 	server.OnClientMessage = [&server](const std::string& message) {
+		// parse the message
+		// do game server things
+
+		// send message to client
 		server.Broadcast(message);
 	};
 

@@ -11,6 +11,9 @@ namespace MOYF
 	using boost::asio::ip::tcp;
 	namespace io = boost::asio;
 
+	using MessageHandler = std::function<void(std::string)>;
+	using ErrorHandler = std::function<void()>;
+
 	class TCPConnection : public std::enable_shared_from_this<TCPConnection>
 	{
 	public:
@@ -28,7 +31,7 @@ namespace MOYF
 			return _socket;
 		}
 
-		void Start();
+		void Start(MessageHandler&& messageHandler, ErrorHandler&& errorHandler);
 		void Post(const std::string& message);
 
 	private:
@@ -44,5 +47,8 @@ namespace MOYF
 		std::string _username;
 		std::queue<std::string> _outgoingMessages;
 		io::streambuf _streamBuf {65536};
+
+		MessageHandler _messageHandler;
+		ErrorHandler _errorHandler;
 	};
 }

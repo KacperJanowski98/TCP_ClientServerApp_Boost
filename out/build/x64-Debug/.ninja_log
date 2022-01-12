@@ -58,3 +58,9 @@
 5106	5197	6636900873581089	Networking/Networking.lib	b124c99516b8013d
 5197	5354	6636900875081108	MYClient/ClientApp.exe	48a4ba2aa96d34bf
 5199	5504	6636900876391055	MYServer/ServerApp.exe	284c8f0f3c879cb3
+22	6263	6636923252915876	MYServer/CMakeFiles/ServerApp.dir/main.cpp.obj	674e3870e5141645
+20	6481	6636923255045876	Networking/CMakeFiles/Networking.dir/src/Server/tcp_connection.cpp.obj	dd5c7737ad8fbd15
+22	6570	6636927919920590	Networking/CMakeFiles/Networking.dir/src/Server/tcp_server.cpp.obj	8ce68a1c873aa30b
+6573	6682	6636927920810588	Networking/Networking.lib	b124c99516b8013d
+6682	6882	6636927922740598	MYClient/ClientApp.exe	48a4ba2aa96d34bf
+6684	7085	6636927924600600	MYServer/ServerApp.exe	284c8f0f3c879cb3

@@ -50,7 +50,15 @@ namespace MOYF
 				_connections.insert(connection);
 				if (!error)
 				{
-					connection->Start();
+					connection->Start(
+						[this](const std::string& message) { if (OnClientMessage) OnClientMessage(message); },
+						[&, weak = std::weak_ptr(connection)]{
+							if (auto shared = weak.lock(); shared && _connections.erase(shared))
+							{
+								if (OnLeave) OnLeave(shared);
+							}
+						}
+					);
 				}
 				startAccept();
 			});

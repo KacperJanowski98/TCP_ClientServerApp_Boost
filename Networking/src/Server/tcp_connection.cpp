@@ -14,8 +14,11 @@ namespace MOYF
 		_username = name.str();
 	}
 
-	void TCPConnection::Start()
+	void TCPConnection::Start(MessageHandler&& messageHandler, ErrorHandler&& errorHandler)
 	{
+		_messageHandler = std::move(messageHandler);
+		_errorHandler = std::move(errorHandler);
+
 		asyncRead();
 	}
 
@@ -44,6 +47,7 @@ namespace MOYF
 		{
 			_socket.close(ec);
 			// error handler
+			_errorHandler();
 			return;
 		}
 		std::stringstream message;
@@ -53,6 +57,7 @@ namespace MOYF
 		std::cout << message.str();
 
 		// add a message handler
+		_messageHandler(message.str());
 		asyncRead();
 	}
 
@@ -70,6 +75,7 @@ namespace MOYF
 		{
 			_socket.close(ec);
 			// error handler
+			_errorHandler();
 			return;
 		}
 
