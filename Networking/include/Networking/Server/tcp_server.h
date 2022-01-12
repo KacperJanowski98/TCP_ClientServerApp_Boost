@@ -9,44 +9,43 @@
 #include <optional>
 #include <unordered_set>
 
-namespace MOYF
+namespace MOYF 
 {
-	namespace io = boost::asio;
+    namespace io = boost::asio;
 
-	enum class IPV
-	{
-		V4,
-		V6
-	};
+    enum class IPV 
+    {
+        V4,
+        V6
+    };
 
-	class TCPServer
-	{
-		using OnJoinHandler = std::function<void(TCPConnection::pointer)>;
-		using OnLeaveHandler = std::function<void(TCPConnection::pointer)>;
-		using OnClientMessageHandler = std::function<void(std::string)>;
+    class TCPServer 
+    {
+        using OnJoinHandler = std::function<void(TCPConnection::pointer)>;
+        using OnLeaveHandler = std::function<void(TCPConnection::pointer)>;
+        using OnClientMessageHandler = std::function<void(std::string)>;
 
-	public:
-		TCPServer(IPV ipv, int port);
+    public:
+        TCPServer(IPV ipv, int port);
 
-		int Run();
-		void Broadcast(const std::string &message);
+        int Run();
+        void Broadcast(const std::string& message);
 
-	private:
-		void startAccept();
+    private:
+        void startAccept();
 
-	public:
-		OnJoinHandler OnJoin;
-		OnLeaveHandler OnLeave;
-		OnClientMessageHandler OnClientMessage;
+    public:
+        OnJoinHandler OnJoin;
+        OnLeaveHandler OnLeave;
+        OnClientMessageHandler OnClientMessage;
 
-	private:
-		IPV _ipVersion;
-		int _port;
+    private:
+        IPV _ipVersion;
+        int _port;
 
-		io::io_context _ioContext;
-		io::ip::tcp::acceptor _acceptor;
-		std::optional<io::ip::tcp::socket> _socket;
-		std::unordered_set<TCPConnection::pointer> _connections {};
-	};
-
+        io::io_context _ioContext;
+        io::ip::tcp::acceptor  _acceptor;
+        std::optional<io::ip::tcp::socket> _socket;
+        std::unordered_set<TCPConnection::pointer> _connections{};
+    };
 }

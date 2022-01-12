@@ -4,29 +4,26 @@
 
 using namespace MOYF;
 
-int main(int argc, char* argv[])
-{
-	TCPClient client{ "localhost", 1337 };
+int main(int argc, char* argv[]) {
+    TCPClient client{ "localhost", 1337 };
 
-	client.OnMessage = [](const std::string& message) {
-		std::cout << message;
-	};
+    client.OnMessage = [](const std::string& message) {
+        std::cout << message;
+    };
 
-	std::thread t{ [&client]() {client.Run(); } };
+    std::thread t{ [&client]() { client.Run(); } };
 
-	while (true)
-	{
-		std::string message;
-		getline(std::cin, message);
+    while (true) {
+        std::string message;
+        getline(std::cin, message);
 
-		if (message == "\\q") break;
-		message += "\n";
+        if (message == "\\q") break;
+        message += "\n";
 
-		client.Post(message);
-	}
+        client.Post(message);
+    }
 
-	client.Stop();
-	t.join();
-
-	return 0;
+    client.Stop();
+    t.join();
+    return 0;
 }

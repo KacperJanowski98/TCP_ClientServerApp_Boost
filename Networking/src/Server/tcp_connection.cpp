@@ -2,89 +2,85 @@
 #include "Networking/Server/tcp_connection.h"
 #include <iostream>
 
-namespace MOYF
-{
-	TCPConnection::TCPConnection(io::ip::tcp::socket&& socket)
-		: _socket(std::move(socket))
-	{
-		boost::system::error_code ec;
-		std::stringstream name;
-		name << _socket.remote_endpoint();
+namespace MOYF {
+    TCPConnection::TCPConnection(io::ip::tcp::socket&& socket) 
+        : _socket(std::move(socket))
+    {
+        boost::system::error_code ec;
 
-		_username = name.str();
-	}
+        std::stringstream name;
+        name << _socket.remote_endpoint();
 
-	void TCPConnection::Start(MessageHandler&& messageHandler, ErrorHandler&& errorHandler)
-	{
-		_messageHandler = std::move(messageHandler);
-		_errorHandler = std::move(errorHandler);
+        _username = name.str();
+    }
 
-		asyncRead();
-	}
+    void TCPConnection::Start(MessageHandler&& messageHandler, ErrorHandler&& errorHandler) 
+    {
+        _messageHandler = std::move(messageHandler);
+        _errorHandler = std::move(errorHandler);
 
-	void TCPConnection::Post(const std::string& message)
-	{
-		bool queueIdle = _outgoingMessages.empty();
-		_outgoingMessages.push(message);
+        asyncRead();
+    }
 
-		if (queueIdle)
-		{
-			asyncWrite();
-		}
-	}
+    void TCPConnection::Post(const std::string& message) 
+    {
+        bool queueIdle = _outgoingMessages.empty();
+        _outgoingMessages.push(message);
 
-	void TCPConnection::asyncRead()
-	{
-		io::async_read_until(_socket, _streamBuf, "\n", 
-			[self = shared_from_this()](boost::system::error_code ec, size_t bytesTransferred){
-			self->onRead(ec, bytesTransferred);
-		});
-	}
+        if (queueIdle) {
+            asyncWrite();
+        }
+    }
 
-	void TCPConnection::onRead(boost::system::error_code ec, size_t bytesTransferred)
-	{
-		if (ec)
-		{
-			_socket.close(ec);
-			// error handler
-			_errorHandler();
-			return;
-		}
-		std::stringstream message;
-		message << _username << ": " << std::iostream(&_streamBuf).rdbuf();
-		_streamBuf.consume(bytesTransferred);
+    void TCPConnection::asyncRead() 
+    {
+        io::async_read_until(_socket, _streamBuf, "\n", [self = shared_from_this()]
+        (boost::system::error_code ec, size_t bytesTransferred) {
+            self->onRead(ec, bytesTransferred);
+        });
+    }
 
-		std::cout << message.str();
+    void TCPConnection::onRead(boost::system::error_code ec, size_t bytesTranferred) 
+    {
+        if (ec) 
+        {
+            _socket.close(ec);
 
-		// add a message handler
-		_messageHandler(message.str());
-		asyncRead();
-	}
+            _errorHandler();
+            return;
+        }
 
-	void TCPConnection::asyncWrite()
-	{
-		io::async_write(_socket, io::buffer(_outgoingMessages.front()),
-			[self = shared_from_this()](boost::system::error_code ec, size_t bytesTransferred){
-			self->onWrite(ec, bytesTransferred);
-		});
-	}
+        std::stringstream message;
+        message << _username << ": " << std::istream(&_streamBuf).rdbuf();
+        _streamBuf.consume(bytesTranferred);
 
-	void TCPConnection::onWrite(boost::system::error_code ec, size_t bytesTransferred)
-	{
-		if (ec)
-		{
-			_socket.close(ec);
-			// error handler
-			_errorHandler();
-			return;
-		}
+        _messageHandler(message.str());
+        asyncRead();
+    }
 
-		_outgoingMessages.pop();
+    void TCPConnection::asyncWrite() 
+    {
+        io::async_write(_socket, io::buffer(_outgoingMessages.front()), [self = shared_from_this()]
+        (boost::system::error_code ec, size_t bytesTransferred) {
+            self->onWrite(ec, bytesTransferred);
+        });
+    }
 
-		if (_outgoingMessages.empty())
-		{
-			asyncWrite();
-		}
-	}
+    void TCPConnection::onWrite(boost::system::error_code ec, size_t bytesTransferred) 
+    {
+        if (ec) 
+        {
+            _socket.close(ec);
 
+            _errorHandler();
+            return;
+        }
+
+        _outgoingMessages.pop();
+
+        if (!_outgoingMessages.empty()) 
+        {
+            asyncWrite();
+        }
+    }
 }

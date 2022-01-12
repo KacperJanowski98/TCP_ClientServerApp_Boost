@@ -2,27 +2,27 @@
 #include <iostream>
 #include <Networking/Server/tcp_server.h>
 
-int main(int argc, char* argv[])
-{
-	MOYF::TCPServer server{ MOYF::IPV::V4, 1337 };
+int main(int argc, char* argv[]) {
 
-	server.OnJoin = [](MOYF::TCPConnection::pointer server) {
-		std::cout << "User has joined the server: " << server->GetUsername() << std::endl;
-	};
+    MOYF::TCPServer server{ MOYF::IPV::V4, 1337 };
 
-	server.OnLeave = [](MOYF::TCPConnection::pointer server) {
-		std::cout << "User has left the server: " << server->GetUsername() << std::endl;
-	};
+    server.OnJoin = [](MOYF::TCPConnection::pointer server) {
+        std::cout << "User has joined the server: " << server->GetUsername() << std::endl;
+    };
 
-	server.OnClientMessage = [&server](const std::string& message) {
-		// parse the message
-		// do game server things
+    server.OnLeave = [](MOYF::TCPConnection::pointer server) {
+        std::cout << "User has left the server: " << server->GetUsername() << std::endl;
+    };
 
-		// send message to client
-		server.Broadcast(message);
-	};
+    server.OnClientMessage = [&server](const std::string& message) {
+        // Parse the message
+        // Do game server things
 
-	server.Run();
+        // Send message to client
+        server.Broadcast(message);
+    };
 
-	return 0;
+    server.Run();
+
+    return 0;
 }
