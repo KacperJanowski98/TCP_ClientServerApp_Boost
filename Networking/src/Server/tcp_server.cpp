@@ -35,12 +35,10 @@ namespace MOYF
 	void TCPServer::startAccept()
 	{
 		_socket.emplace(_ioContext);
-		// create a connection
-		
 
 		// asynchronously accept the connection
 		_acceptor.async_accept(*_socket, [this](const boost::system::error_code& error){
-				auto connection = TCPConnection::Create(_ioContext);
+				auto connection = TCPConnection::Create(std::move(*_socket));
 
 				_connections.insert(connection);
 

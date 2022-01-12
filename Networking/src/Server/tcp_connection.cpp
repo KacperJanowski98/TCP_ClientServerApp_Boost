@@ -4,8 +4,8 @@
 
 namespace MOYF
 {
-	TCPConnection::TCPConnection(boost::asio::io_context &ioContext)
-		: _socket(ioContext)
+	TCPConnection::TCPConnection(io::ip::tcp::socket&& socket)
+		: _socket(std::move(socket))
 	{}
 
 	void TCPConnection::Start()
