@@ -5,5 +5,5 @@ project ("ClientServerApp")
 
 add_subdirectory ("Networking")
 
-add_subdirectory ("Client")
-add_subdirectory ("Server")
+add_subdirectory ("MYClient")
+add_subdirectory ("MYServer")

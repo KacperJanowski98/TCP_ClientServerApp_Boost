@@ -35,8 +35,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Networking/cmake_install.cmake")
-  include("D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Client/cmake_install.cmake")
-  include("D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Server/cmake_install.cmake")
+  include("D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/MYClient/cmake_install.cmake")
+  include("D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/MYServer/cmake_install.cmake")
 
 endif()
 

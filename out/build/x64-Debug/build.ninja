@@ -77,19 +77,19 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 build cmake_object_order_depends_target_Networking: phony || Networking\CMakeFiles\Networking.dir
 
-build Networking\CMakeFiles\Networking.dir\src\tcp_connection.cpp.obj: CXX_COMPILER__Networking_Debug D$:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\src\tcp_connection.cpp || cmake_object_order_depends_target_Networking
+build Networking\CMakeFiles\Networking.dir\src\Server\tcp_connection.cpp.obj: CXX_COMPILER__Networking_Debug D$:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\src\Server\tcp_connection.cpp || cmake_object_order_depends_target_Networking
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++20
   INCLUDES = -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\include -ID:\Lib_Cpp\boost_1_78_0
   OBJECT_DIR = Networking\CMakeFiles\Networking.dir
-  OBJECT_FILE_DIR = Networking\CMakeFiles\Networking.dir\src
+  OBJECT_FILE_DIR = Networking\CMakeFiles\Networking.dir\src\Server
   TARGET_COMPILE_PDB = Networking\CMakeFiles\Networking.dir\Networking.pdb
   TARGET_PDB = Networking\Networking.pdb
 
-build Networking\CMakeFiles\Networking.dir\src\tcp_server.cpp.obj: CXX_COMPILER__Networking_Debug D$:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\src\tcp_server.cpp || cmake_object_order_depends_target_Networking
+build Networking\CMakeFiles\Networking.dir\src\Server\tcp_server.cpp.obj: CXX_COMPILER__Networking_Debug D$:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\src\Server\tcp_server.cpp || cmake_object_order_depends_target_Networking
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++20
   INCLUDES = -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\include -ID:\Lib_Cpp\boost_1_78_0
   OBJECT_DIR = Networking\CMakeFiles\Networking.dir
-  OBJECT_FILE_DIR = Networking\CMakeFiles\Networking.dir\src
+  OBJECT_FILE_DIR = Networking\CMakeFiles\Networking.dir\src\Server
   TARGET_COMPILE_PDB = Networking\CMakeFiles\Networking.dir\Networking.pdb
   TARGET_PDB = Networking\Networking.pdb
 
@@ -101,7 +101,7 @@ build Networking\CMakeFiles\Networking.dir\src\tcp_server.cpp.obj: CXX_COMPILER_
 #############################################
 # Link the static library Networking\Networking.lib
 
-build Networking\Networking.lib: CXX_STATIC_LIBRARY_LINKER__Networking_Debug Networking\CMakeFiles\Networking.dir\src\tcp_connection.cpp.obj Networking\CMakeFiles\Networking.dir\src\tcp_server.cpp.obj
+build Networking\Networking.lib: CXX_STATIC_LIBRARY_LINKER__Networking_Debug Networking\CMakeFiles\Networking.dir\src\Server\tcp_connection.cpp.obj Networking\CMakeFiles\Networking.dir\src\Server\tcp_server.cpp.obj
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = Networking\CMakeFiles\Networking.dir
@@ -143,13 +143,13 @@ build Networking\rebuild_cache: phony Networking\CMakeFiles\rebuild_cache.util
 #############################################
 # Utility command for rebuild_cache
 
-build Client\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\Projekty\TCP_Client_Server_C++\ClientServerApp\out\build\x64-Debug\Client && "D:\Program Files (x86)\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Projekty\TCP_Client_Server_C++\ClientServerApp -BD:\Projekty\TCP_Client_Server_C++\ClientServerApp\out\build\x64-Debug"
+build MYClient\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D D:\Projekty\TCP_Client_Server_C++\ClientServerApp\out\build\x64-Debug\MYClient && "D:\Program Files (x86)\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Projekty\TCP_Client_Server_C++\ClientServerApp -BD:\Projekty\TCP_Client_Server_C++\ClientServerApp\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build Client\rebuild_cache: phony Client\CMakeFiles\rebuild_cache.util
+build MYClient\rebuild_cache: phony MYClient\CMakeFiles\rebuild_cache.util
 
 # =============================================================================
 # Object build statements for EXECUTABLE target ClientApp
@@ -160,13 +160,13 @@ build Client\rebuild_cache: phony Client\CMakeFiles\rebuild_cache.util
 
 build cmake_object_order_depends_target_ClientApp: phony || cmake_object_order_depends_target_Networking
 
-build Client\CMakeFiles\ClientApp.dir\main.cpp.obj: CXX_COMPILER__ClientApp_Debug D$:\Projekty\TCP_Client_Server_C++\ClientServerApp\Client\main.cpp || cmake_object_order_depends_target_ClientApp
+build MYClient\CMakeFiles\ClientApp.dir\main.cpp.obj: CXX_COMPILER__ClientApp_Debug D$:\Projekty\TCP_Client_Server_C++\ClientServerApp\MYClient\main.cpp || cmake_object_order_depends_target_ClientApp
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++20
-  INCLUDES = -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Client\Networking -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\include -ID:\Lib_Cpp\boost_1_78_0
-  OBJECT_DIR = Client\CMakeFiles\ClientApp.dir
-  OBJECT_FILE_DIR = Client\CMakeFiles\ClientApp.dir
-  TARGET_COMPILE_PDB = Client\CMakeFiles\ClientApp.dir\
-  TARGET_PDB = Client\ClientApp.pdb
+  INCLUDES = -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\MYClient\Networking -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\include -ID:\Lib_Cpp\boost_1_78_0
+  OBJECT_DIR = MYClient\CMakeFiles\ClientApp.dir
+  OBJECT_FILE_DIR = MYClient\CMakeFiles\ClientApp.dir
+  TARGET_COMPILE_PDB = MYClient\CMakeFiles\ClientApp.dir\
+  TARGET_PDB = MYClient\ClientApp.pdb
 
 
 # =============================================================================
@@ -174,30 +174,30 @@ build Client\CMakeFiles\ClientApp.dir\main.cpp.obj: CXX_COMPILER__ClientApp_Debu
 
 
 #############################################
-# Link the executable Client\ClientApp.exe
+# Link the executable MYClient\ClientApp.exe
 
-build Client\ClientApp.exe: CXX_EXECUTABLE_LINKER__ClientApp_Debug Client\CMakeFiles\ClientApp.dir\main.cpp.obj | Networking\Networking.lib || Networking\Networking.lib
+build MYClient\ClientApp.exe: CXX_EXECUTABLE_LINKER__ClientApp_Debug MYClient\CMakeFiles\ClientApp.dir\main.cpp.obj | Networking\Networking.lib || Networking\Networking.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = Networking\Networking.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = Client\CMakeFiles\ClientApp.dir
+  OBJECT_DIR = MYClient\CMakeFiles\ClientApp.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = Client\CMakeFiles\ClientApp.dir\
-  TARGET_FILE = Client\ClientApp.exe
-  TARGET_IMPLIB = Client\ClientApp.lib
-  TARGET_PDB = Client\ClientApp.pdb
+  TARGET_COMPILE_PDB = MYClient\CMakeFiles\ClientApp.dir\
+  TARGET_FILE = MYClient\ClientApp.exe
+  TARGET_IMPLIB = MYClient\ClientApp.lib
+  TARGET_PDB = MYClient\ClientApp.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
-build Client\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\Projekty\TCP_Client_Server_C++\ClientServerApp\out\build\x64-Debug\Client && "D:\Program Files (x86)\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+build MYClient\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D D:\Projekty\TCP_Client_Server_C++\ClientServerApp\out\build\x64-Debug\MYClient && "D:\Program Files (x86)\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build Client\edit_cache: phony Client\CMakeFiles\edit_cache.util
+build MYClient\edit_cache: phony MYClient\CMakeFiles\edit_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -213,13 +213,13 @@ build Client\edit_cache: phony Client\CMakeFiles\edit_cache.util
 
 build cmake_object_order_depends_target_ServerApp: phony || cmake_object_order_depends_target_Networking
 
-build Server\CMakeFiles\ServerApp.dir\main.cpp.obj: CXX_COMPILER__ServerApp_Debug D$:\Projekty\TCP_Client_Server_C++\ClientServerApp\Server\main.cpp || cmake_object_order_depends_target_ServerApp
+build MYServer\CMakeFiles\ServerApp.dir\main.cpp.obj: CXX_COMPILER__ServerApp_Debug D$:\Projekty\TCP_Client_Server_C++\ClientServerApp\MYServer\main.cpp || cmake_object_order_depends_target_ServerApp
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++20
-  INCLUDES = -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Server\Networking -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\include -ID:\Lib_Cpp\boost_1_78_0
-  OBJECT_DIR = Server\CMakeFiles\ServerApp.dir
-  OBJECT_FILE_DIR = Server\CMakeFiles\ServerApp.dir
-  TARGET_COMPILE_PDB = Server\CMakeFiles\ServerApp.dir\
-  TARGET_PDB = Server\ServerApp.pdb
+  INCLUDES = -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\MYServer\Networking -ID:\Projekty\TCP_Client_Server_C++\ClientServerApp\Networking\include -ID:\Lib_Cpp\boost_1_78_0
+  OBJECT_DIR = MYServer\CMakeFiles\ServerApp.dir
+  OBJECT_FILE_DIR = MYServer\CMakeFiles\ServerApp.dir
+  TARGET_COMPILE_PDB = MYServer\CMakeFiles\ServerApp.dir\
+  TARGET_PDB = MYServer\ServerApp.pdb
 
 
 # =============================================================================
@@ -227,57 +227,57 @@ build Server\CMakeFiles\ServerApp.dir\main.cpp.obj: CXX_COMPILER__ServerApp_Debu
 
 
 #############################################
-# Link the executable Server\ServerApp.exe
+# Link the executable MYServer\ServerApp.exe
 
-build Server\ServerApp.exe: CXX_EXECUTABLE_LINKER__ServerApp_Debug Server\CMakeFiles\ServerApp.dir\main.cpp.obj | Networking\Networking.lib || Networking\Networking.lib
+build MYServer\ServerApp.exe: CXX_EXECUTABLE_LINKER__ServerApp_Debug MYServer\CMakeFiles\ServerApp.dir\main.cpp.obj | Networking\Networking.lib || Networking\Networking.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = Networking\Networking.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = Server\CMakeFiles\ServerApp.dir
+  OBJECT_DIR = MYServer\CMakeFiles\ServerApp.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = Server\CMakeFiles\ServerApp.dir\
-  TARGET_FILE = Server\ServerApp.exe
-  TARGET_IMPLIB = Server\ServerApp.lib
-  TARGET_PDB = Server\ServerApp.pdb
+  TARGET_COMPILE_PDB = MYServer\CMakeFiles\ServerApp.dir\
+  TARGET_FILE = MYServer\ServerApp.exe
+  TARGET_IMPLIB = MYServer\ServerApp.lib
+  TARGET_PDB = MYServer\ServerApp.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
-build Server\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\Projekty\TCP_Client_Server_C++\ClientServerApp\out\build\x64-Debug\Server && "D:\Program Files (x86)\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+build MYServer\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D D:\Projekty\TCP_Client_Server_C++\ClientServerApp\out\build\x64-Debug\MYServer && "D:\Program Files (x86)\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build Server\edit_cache: phony Server\CMakeFiles\edit_cache.util
+build MYServer\edit_cache: phony MYServer\CMakeFiles\edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build Server\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\Projekty\TCP_Client_Server_C++\ClientServerApp\out\build\x64-Debug\Server && "D:\Program Files (x86)\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Projekty\TCP_Client_Server_C++\ClientServerApp -BD:\Projekty\TCP_Client_Server_C++\ClientServerApp\out\build\x64-Debug"
+build MYServer\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D D:\Projekty\TCP_Client_Server_C++\ClientServerApp\out\build\x64-Debug\MYServer && "D:\Program Files (x86)\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Projekty\TCP_Client_Server_C++\ClientServerApp -BD:\Projekty\TCP_Client_Server_C++\ClientServerApp\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build Server\rebuild_cache: phony Server\CMakeFiles\rebuild_cache.util
+build MYServer\rebuild_cache: phony MYServer\CMakeFiles\rebuild_cache.util
 
 # =============================================================================
 # Target aliases.
 
-build ClientApp: phony Client\ClientApp.exe
+build ClientApp: phony MYClient\ClientApp.exe
 
-build ClientApp.exe: phony Client\ClientApp.exe
+build ClientApp.exe: phony MYClient\ClientApp.exe
 
 build Networking: phony Networking\Networking.lib
 
 build Networking.lib: phony Networking\Networking.lib
 
-build ServerApp: phony Server\ServerApp.exe
+build ServerApp: phony MYServer\ServerApp.exe
 
-build ServerApp.exe: phony Server\ServerApp.exe
+build ServerApp.exe: phony MYServer\ServerApp.exe
 
 # =============================================================================
 # Folder targets.
@@ -287,14 +287,21 @@ build ServerApp.exe: phony Server\ServerApp.exe
 #############################################
 # Folder: D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug
 
-build all: phony Networking\all Client\all Server\all
+build all: phony Networking\all MYClient\all MYServer\all
 
 # =============================================================================
 
 #############################################
-# Folder: D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Client
+# Folder: D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/MYClient
 
-build Client\all: phony Client\ClientApp.exe
+build MYClient\all: phony MYClient\ClientApp.exe
+
+# =============================================================================
+
+#############################################
+# Folder: D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/MYServer
+
+build MYServer\all: phony MYServer\ServerApp.exe
 
 # =============================================================================
 
@@ -304,27 +311,20 @@ build Client\all: phony Client\ClientApp.exe
 build Networking\all: phony Networking\Networking.lib
 
 # =============================================================================
-
-#############################################
-# Folder: D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Server
-
-build Server\all: phony Server\ServerApp.exe
-
-# =============================================================================
 # Built-in targets
 
 
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\Client\CMakeLists.txt ..\..\..\Networking\CMakeLists.txt ..\..\..\Server\CMakeLists.txt CMakeCache.txt CMakeFiles\3.21.21080301-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.21.21080301-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.21.21080301-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.21.21080301-MSVC_2\CMakeSystem.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\FindBoost.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\FindPackageMessage.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | ..\..\..\CMakeLists.txt ..\..\..\MYClient\CMakeLists.txt ..\..\..\MYServer\CMakeLists.txt ..\..\..\Networking\CMakeLists.txt CMakeCache.txt CMakeFiles\3.21.21080301-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.21.21080301-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.21.21080301-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.21.21080301-MSVC_2\CMakeSystem.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\FindBoost.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\FindPackageMessage.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ..\..\..\CMakeLists.txt ..\..\..\Client\CMakeLists.txt ..\..\..\Networking\CMakeLists.txt ..\..\..\Server\CMakeLists.txt CMakeCache.txt CMakeFiles\3.21.21080301-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.21.21080301-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.21.21080301-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.21.21080301-MSVC_2\CMakeSystem.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\FindBoost.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\FindPackageMessage.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake: phony
+build ..\..\..\CMakeLists.txt ..\..\..\MYClient\CMakeLists.txt ..\..\..\MYServer\CMakeLists.txt ..\..\..\Networking\CMakeLists.txt CMakeCache.txt CMakeFiles\3.21.21080301-MSVC_2\CMakeCCompiler.cmake CMakeFiles\3.21.21080301-MSVC_2\CMakeCXXCompiler.cmake CMakeFiles\3.21.21080301-MSVC_2\CMakeRCCompiler.cmake CMakeFiles\3.21.21080301-MSVC_2\CMakeSystem.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeCInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeCXXInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeGenericSystem.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeInitializeConfigs.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeRCInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInformation.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\CMakeSystemSpecificInitialize.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Compiler\MSVC-CXX.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\FindBoost.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\FindPackageMessage.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC-CXX.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\Windows.cmake D$:\Program$ Files$ (x86)\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.21\Modules\Platform\WindowsPaths.cmake: phony
 
 
 #############################################

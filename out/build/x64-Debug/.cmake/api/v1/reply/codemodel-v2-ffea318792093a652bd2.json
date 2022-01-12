@@ -1,0 +1,159 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Networking",
+					"jsonFile" : "directory-Networking-Debug-94e14672aa1c5415af47.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "Networking",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "MYClient",
+					"jsonFile" : "directory-MYClient-Debug-26a423ff3377d3526a96.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "MYClient",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "MYServer",
+					"jsonFile" : "directory-MYServer-Debug-ebf1263ee66692ed1ff2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "MYServer",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ClientServerApp"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "Networking",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "ClientApp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "ServerApp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "ClientApp::@0eb9d1909a2c5eab9149",
+					"jsonFile" : "target-ClientApp-Debug-fdd63f6c96e48fa8356b.json",
+					"name" : "ClientApp",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Networking::@20af8fe841ac235eb447",
+					"jsonFile" : "target-Networking-Debug-bef83bb1dbc183428a40.json",
+					"name" : "Networking",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ServerApp::@00fc364cd345532b4643",
+					"jsonFile" : "target-ServerApp-Debug-73feb075b923b4a4e1b9.json",
+					"name" : "ServerApp",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug",
+		"source" : "D:/Projekty/TCP_Client_Server_C++/ClientServerApp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

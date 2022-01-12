@@ -3,9 +3,9 @@ D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/CMakeFiles
 D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Networking/CMakeFiles/Networking.dir
 D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Networking/CMakeFiles/edit_cache.dir
 D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Networking/CMakeFiles/rebuild_cache.dir
-D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Client/CMakeFiles/rebuild_cache.dir
-D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Client/CMakeFiles/ClientApp.dir
-D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Client/CMakeFiles/edit_cache.dir
-D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Server/CMakeFiles/ServerApp.dir
-D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Server/CMakeFiles/edit_cache.dir
-D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/Server/CMakeFiles/rebuild_cache.dir
+D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/MYClient/CMakeFiles/rebuild_cache.dir
+D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/MYClient/CMakeFiles/ClientApp.dir
+D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/MYClient/CMakeFiles/edit_cache.dir
+D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/MYServer/CMakeFiles/ServerApp.dir
+D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/MYServer/CMakeFiles/edit_cache.dir
+D:/Projekty/TCP_Client_Server_C++/ClientServerApp/out/build/x64-Debug/MYServer/CMakeFiles/rebuild_cache.dir
