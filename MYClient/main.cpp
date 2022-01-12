@@ -1,52 +1,32 @@
-﻿#include <boost/asio.hpp>
-#include <array>
-#include <iostream>
+﻿#include <iostream>
 #include <Networking/Client/tcp_client.h>
+#include <thread>
 
-using boost::asio::ip::tcp;
+using namespace MOYF;
 
 int main(int argc, char* argv[])
 {
-	try
+	TCPClient client{ "localhost", 1337 };
+
+	client.OnMessage = [](const std::string& message) {
+		std::cout << message;
+	};
+
+	std::thread t{ [&client]() {client.Run(); } };
+
+	while (true)
 	{
-		boost::asio::io_context ioContext;
+		std::string message;
+		getline(std::cin, message);
 
-		// object to resolve a query to a list of endpoints
-		tcp::resolver resolver{ ioContext };
+		if (message == "\\q") break;
+		message += "\n";
 
-		// perform forward resolution of a query to a list of entries
-		auto endpoints = resolver.resolve("127.0.0.1", "1337");
-
-		tcp::socket socket{ ioContext };
-		// establish a socket connection by trying each endpoint in a sequence
-		boost::asio::connect(socket, endpoints);
-
-		while (true)
-		{
-			// listen for messages
-			std::array<char, 128> buff;
-			boost::system::error_code error;
-
-			// read some data from socket
-			size_t len = socket.read_some(boost::asio::buffer(buff), error);
-
-			if (error == boost::asio::error::eof)
-			{
-				// clean connection cut off
-				break;
-			}
-			else if (error)
-			{
-				throw boost::system::system_error(error);
-			}
-
-			std::cout.write(buff.data(), len);
-		}
+		client.Post(message);
 	}
-	catch (std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
+
+	client.Stop();
+	t.join();
 
 	return 0;
 }
