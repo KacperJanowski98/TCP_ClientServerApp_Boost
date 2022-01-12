@@ -4,6 +4,7 @@
 #include <boost/asio.hpp>
 #include <string>
 #include <memory>
+#include <queue>
 
 namespace MOYF
 {
@@ -26,12 +27,20 @@ namespace MOYF
 		}
 
 		void Start();
+		void Post(const std::string& message);
 
 	private:
 		explicit TCPConnection(io::ip::tcp::socket&& socket);
+		// wait for new message from client
+		void asyncRead();
+		void onRead(boost::system::error_code ec, size_t bytesTransferred);
+		void asyncWrite();
+		void onWrite(boost::system::error_code ec, size_t bytesTransferred);
 
 	private:
 		tcp::socket _socket;
-		std::string _message {"Hello client!\n"};
+		std::string _username;
+		std::queue<std::string> _outgoingMessages;
+		io::streambuf _streamBuf {65536};
 	};
 }
