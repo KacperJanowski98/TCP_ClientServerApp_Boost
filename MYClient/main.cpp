@@ -1,6 +1,7 @@
 ﻿#include <boost/asio.hpp>
 #include <array>
 #include <iostream>
+#include <Networking/Client/tcp_client.h>
 
 using boost::asio::ip::tcp;
 
