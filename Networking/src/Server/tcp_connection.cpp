@@ -16,7 +16,7 @@ namespace MOYF
 
 	void TCPConnection::Start()
 	{
-		
+		asyncRead();
 	}
 
 	void TCPConnection::Post(const std::string& message)
@@ -26,12 +26,28 @@ namespace MOYF
 
 	void TCPConnection::asyncRead()
 	{
-
+		io::async_read_until(_socket, _streamBuf, "\n", 
+			[self = shared_from_this()](boost::system::error_code ec, size_t bytesTransferred){
+			self->onRead(ec, bytesTransferred);
+		});
 	}
 
 	void TCPConnection::onRead(boost::system::error_code ec, size_t bytesTransferred)
 	{
+		if (ec)
+		{
+			_socket.close(ec);
+			// error handler
+			return;
+		}
+		std::stringstream message;
+		message << _username << ": " << std::iostream(&_streamBuf).rdbuf();
+		_streamBuf.consume(bytesTransferred);
 
+		std::cout << message.str();
+
+		// add a message handler
+		asyncRead();
 	}
 
 	void TCPConnection::asyncWrite()
