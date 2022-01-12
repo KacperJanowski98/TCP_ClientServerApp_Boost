@@ -4,6 +4,7 @@
 #include <boost/asio.hpp>
 #include "Networking/Server/tcp_connection.h"
 #include <vector>
+#include <string>
 #include <functional>
 #include <optional>
 #include <unordered_set>
@@ -20,13 +21,24 @@ namespace MOYF
 
 	class TCPServer
 	{
+		using OnJoinHandler = std::function<void(TCPConnection::pointer)>;
+		using OnLeaveHandler = std::function<void(TCPConnection::pointer)>;
+		using OnClientMessageHandler = std::function<void(std::string)>;
+
 	public:
 		TCPServer(IPV ipv, int port);
 
 		int Run();
 		void Broadcast(const std::string &message);
+
 	private:
 		void startAccept();
+
+	public:
+		OnJoinHandler OnJoin;
+		OnLeaveHandler OnLeave;
+		OnClientMessageHandler OnClientMessage;
+
 	private:
 		IPV _ipVersion;
 		int _port;

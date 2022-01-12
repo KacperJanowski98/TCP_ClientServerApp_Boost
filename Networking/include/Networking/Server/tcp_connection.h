@@ -21,6 +21,8 @@ namespace MOYF
 			return pointer(new TCPConnection(std::move(socket)));
 		}
 
+		inline const std::string& GetUsername() const { return _username; }
+
 		tcp::socket& Socket()
 		{
 			return _socket;
