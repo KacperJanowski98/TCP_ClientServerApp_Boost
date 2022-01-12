@@ -21,7 +21,13 @@ namespace MOYF
 
 	void TCPConnection::Post(const std::string& message)
 	{
+		bool queueIdle = _outgoingMessages.empty();
+		_outgoingMessages.push(message);
 
+		if (queueIdle)
+		{
+			asyncWrite();
+		}
 	}
 
 	void TCPConnection::asyncRead()
@@ -52,12 +58,27 @@ namespace MOYF
 
 	void TCPConnection::asyncWrite()
 	{
-
+		io::async_write(_socket, io::buffer(_outgoingMessages.front()),
+			[self = shared_from_this()](boost::system::error_code ec, size_t bytesTransferred){
+			self->onWrite(ec, bytesTransferred);
+		});
 	}
 
 	void TCPConnection::onWrite(boost::system::error_code ec, size_t bytesTransferred)
 	{
+		if (ec)
+		{
+			_socket.close(ec);
+			// error handler
+			return;
+		}
 
+		_outgoingMessages.pop();
+
+		if (_outgoingMessages.empty())
+		{
+			asyncWrite();
+		}
 	}
 
 }
